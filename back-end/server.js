@@ -6,6 +6,7 @@ import connectDB from './config/database.js'; // Database connection function
 import authRoutes from './routes/auth.js';
 import walletRoutes from './routes/wallet.js';
 import lendingRoutes from './routes/lending.js';
+import testRoutes from './routes/test.js';
 
 // Load environment variables
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(express.json()); // Parse JSON payloads
 app.use('/api/auth', authRoutes); // Authentication routes
 app.use('/api/wallet', walletRoutes); // Wallet management routes
 app.use('/api/lending', lendingRoutes); // Lending platform routes
+app.use('/api/test', testRoutes); // Test routes
 
 // Define the server port
 const PORT = process.env.PORT || 5002;
